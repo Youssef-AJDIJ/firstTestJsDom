@@ -1,0 +1,49 @@
+.header {
+  background-color: burlywood;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  position: relative;
+}
+.navbar-list {
+  display: flex;
+  column-gap: 40px;
+}
+.open-menu, .close-menu{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 520px) {
+    .logo{
+        display: none;
+    }
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+   
+  .open-menu{
+    display: block;
+}
+}
+
+
+[data-drop="dropDownList"]{
+    
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    width: 100dvw;
+    background-color: rgb(104, 104, 103);
+
+  }

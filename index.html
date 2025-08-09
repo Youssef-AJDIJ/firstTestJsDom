@@ -1,11 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>Nav Responsive</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="" alt="Logo" />
+        </div>
+        <ul class="navbar-list" id="">
+          <li class="list-item"><a href="#">Inicio</a></li>
+          <li class="list-item"><a href="#">Productos</a></li>
+          <li class="list-item"><a href="#">Descargas</a></li>
+          <li class="list-item"><a href="#">Compras</a></li>
+        </ul>
+        <img src="img/menu.png" class="open-menu" alt="" />
+        <img src="img/close.png" class="close-menu" alt="" />
+      </nav>
+    </header>
+  </body>
+  <script type="text/javascript">
+        const open_menu = document.querySelector(".open-menu")
+        const close_menu = document.querySelector(".close-menu")
+        const navbarlist = document.querySelector(".navbar-list")
+
+        console.log(navbarlist.clientWidth)
+
+        open_menu.addEventListener("click",() => {
+         navbarlist.setAttribute("data-drop", "dropDownList");
+        open_menu.style.display = "none"
+        close_menu.style.display = "block"
+
+        })
+
+        close_menu.addEventListener("click",() => {
+            navbarlist.removeAttribute("data-drop")
+            close_menu.style.display = "none"
+            open_menu.style.display = "block"
+        })
+
+
+       
+  </script>
 </html>
